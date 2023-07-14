@@ -1,3 +1,4 @@
+# расчет времени работы магазина
 from datetime import datetime, timedelta
 
 day,time= '16.07.2022 18:00'.split(' ')

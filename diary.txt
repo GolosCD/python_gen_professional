@@ -1,4 +1,4 @@
-#test git branch
+#отправляем фьюче витку в гитзаб
 
 23.03.2008; 19:16
 The robotics was a lot of fun, and opening the Kibo (JEM - Japanese Experiment Module) and flying in there for the first time was really something.

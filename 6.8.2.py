@@ -39,7 +39,7 @@ counter_words = Counter('арбуз МалинА клубника Банан В�
 
 tmp_list = list(counter_words.values())
 
-print(', '.join(map(lambda x: x[0],sorted(counter_words.most_common()[::-1][:tmp_list.count(min(tmp_list))]))))
+print(', '.join(map(lambda x: x[0],sorted(counter_words.most_common(tmp_list.count(min(tmp_list)))))))
 
 '''
 Лучшее что смог родить мой мозг.

@@ -1,0 +1,62 @@
+[
+   {
+      "Axolotl": 11,
+      "Poison Frog": 12,
+      "Sonoran Toad": 6,
+      "Tiger Salamander": 16
+   },
+   {
+      "African Fish Eagle": 6,
+      "Andean Condor": 8,
+      "Black Vulture": 8,
+      "Bufflehead Duck": 9,
+      "Flamingo": 8,
+      "Great Horned Owl": 16,
+      "Hornbill": 1
+   },
+   {
+      "Armored Catfish": 3,
+      "Rainbowfish": 18,
+      "Banded Archerfish": 5,
+      "Bucktooth Tetra": 7
+   },
+   {
+      "Scorpion": 12,
+      "Madagascar Hissing Cockroach": 15,
+      "Sunburst Diving Beetle": 13
+   },
+   {
+      "Addax": 13,
+      "African Hedgehog": 7,
+      "Painted Dog": 20,
+      "American Badger": 4,
+      "Black Bear": 13,
+      "Asian Elephant": 4,
+      "Babirusa": 5,
+      "Tapir": 4,
+      "Bat-eared Fox": 4,
+      "Berrendo": 12,
+      "Langur": 7,
+      "Giant Anteater": 18,
+      "Giant Otter": 7,
+      "Zebra": 19,
+      "Guinea Pig": 3,
+      "Mangabey": 13,
+      "Lemur": 9
+   },
+   {
+      "Aldabra Tortoise": 4,
+      "Allugator": 7,
+      "Butaan": 14,
+      "Kingsnake": 5,
+      "Iguana": 3,
+      "Caiman": 9,
+      "Viper": 12,
+      "Gila Monster": 11,
+      "Green Mamba": 18,
+      "Python": 10,
+      "Komodo Dragon": 9,
+      "Gecko": 2,
+      "Rosy Boa": 3
+   }
+]

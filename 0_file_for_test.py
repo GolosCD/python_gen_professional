@@ -1,7 +1,5 @@
 from collections import ChainMap
 
-fruits = ChainMap({'kiwi': 10, 'banana': 20},
-                  {'lime': 10, 'pineapple': 15},
-                  {'kiwi': 15, 'lime': 5})
+chainmap = ChainMap({1:1,2:2},{3:3})
 
-print(*fruits.items())
+print(chainmap)

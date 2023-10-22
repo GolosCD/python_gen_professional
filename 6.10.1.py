@@ -35,14 +35,7 @@ set()
 from collections import ChainMap
 
 def get_all_values(chinmap: dict, key:str)->list:
-    if key in chainmap.parents:
-        result_list: set = set()
-        for tmp_dict in chinmap.maps:
-            result_list.add(tmp_dict.get(key))
-        result_list.discard(None)    
-        return result_list
-    else:
-        return set()
+    return {minidict[key] for minidict in chainmap.maps if key in minidict}
     
 
 chainmap = ChainMap({'name': 'Anri'}, {'name': 'Arthur', 'age': 20}, {'name': 'Timur', 'age': 29})

@@ -81,3 +81,28 @@ while True:
     else:
         break
 print('Success!')  
+
+
+лучший ответ:
+def is_good_password(string):    
+    if len(string) < 9:
+        raise LengthError('LengthError')
+    if all((any(i.islower() for i in string),  any(i.isupper() for i in string))) != string == string.lower() or string == string.upper():
+        raise LetterError('LetterError')
+    if string.isdigit() and not string.isalpha() or len(set('0123456789') & set(string)) == 0:
+        raise DigitError('DigitError')
+    else:
+        return 'Success!'
+        
+        
+
+
+
+for string in sys.stdin:
+    try:
+        print(is_good_password(string.strip()))
+    except Exception as err:
+        print(err)
+    else:
+        break
+

@@ -1,1 +1,3 @@
 *.ini
+*_test.py
+0_file_for_test.py

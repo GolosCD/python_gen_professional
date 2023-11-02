@@ -11,7 +11,7 @@
 
 # Архив с тестами
 # GitHub
-# Sample Input 1:
+# Sample Input 1: 
 
 # 25
 # Sample Output 1:

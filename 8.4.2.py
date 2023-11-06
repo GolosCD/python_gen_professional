@@ -1,19 +1,40 @@
-# linear_list: list=list()
+'''
+Линеаризация — это процесс преобразования списка, который может содержать несколько уровней вложенных списков, в список, содержащий все те же элементы без какой-либо вложенности.
 
-# def linear(nested_lists:list)-> list:
-# 	global linear_list
-    
-# 	for row in nested_lists:
+Например, список:
 
-# 		if row==None:
-# 			return linear_list
+[1, [2, 3], [4, [5, 6, [7, 8, 9]]]]
+после линеаризации будет иметь вид:
 
-# 		elif type(row)!= list:
-# 			linear_list.append((row))
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+Реализуйте linear() с использованием рекурсии, которая принимает один аргумент:
 
-# 		if type(row)==list:
-# 			linear(row)
-# 	return linear_list
+nested_lists — список, элементами которого являются целые числа или списки, элементами которых, в свою очередь, также являются либо целые числа, либо списки; вложенность может быть произвольной
+Функция должна возвращать новый список, представляющий собой линеаризованный список nested_lists.
+
+Примечание 1. В тестирующую систему сдайте программу, содержащую только необходимую функцию linear(), но не код, вызывающий ее.
+
+Примечание 2. Тестовые данные доступны по ссылкам:
+
+Архив с тестами
+GitHub
+Sample Input 1:
+
+my_list = [3, [4], [5, [6, [7, 8]]]]
+
+print(linear(my_list))
+Sample Output 1:
+
+[3, 4, 5, 6, 7, 8]
+Sample Input 2:
+
+my_list = [10, 20, 30, 40, 50]
+
+print(linear(my_list))
+Sample Output 2:
+
+[10, 20, 30, 40, 50]
+'''
 
 def linear(nested_lists:list)-> list:
 		
@@ -26,4 +47,10 @@ def linear(nested_lists:list)-> list:
 				linear_list.append((row))
 			if type(row)==list:
 				linear_add(row)
-	return linear_list 
+		return linear_list
+	return linear_add(nested_lists)
+
+
+my_list = [3, [4], [5, [6, [7, 8]]]]
+
+print(linear(my_list))

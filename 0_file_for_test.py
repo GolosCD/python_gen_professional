@@ -1,7 +1,6 @@
 string = 'bacde'
 
-if hasattr(string, 'sort'):
-    string.sort()
+a = '''if hasattr(string, 'sort'):
+    string.sort()'''
 
-print(string)
-print(hasattr(string, 'sort'))
+print(eval(a))

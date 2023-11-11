@@ -48,4 +48,10 @@ Lambda-функция принимает символ x и возвращает 
 Результат сортировки сохраняется в переменную result, которая затем выводится на экран.
 '''
 
-print(''.join(sorted(input(), key=lambda x: (x.isdigit(), x.isdigit() and int(x) % 2 == 0, x.isupper(), x.islower(), x))))
+inst = 'Sorting1234'
+
+
+#print(''.join(sorted(inst, key=lambda x: (x.isdigit(), x.isdigit() and int(x) % 2 == 0, x.isupper(), x.islower(), x))))
+
+
+print(''.join(sorted(inst, key=lambda x: (x.isdigit(),x.isdigit() and int(x)%2==0,x.isupper(),x))))

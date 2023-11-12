@@ -99,3 +99,25 @@ def verification(login   :str,
               break
     else:
          success(login)
+
+#тот же смысл только без лямбда функции, теперь решение читается как просто книжка
+from string import ascii_letters, ascii_uppercase, ascii_lowercase, digits
+
+def verification(login   :str,
+                 password:str,
+                 success :callable,
+                 failure :callable
+                 )->str:
+    
+    #создали словарь где ключ - это набор символов которые нужно проверить
+    error_dict:dict = dict(((ascii_letters,'буквы'),
+                            (ascii_uppercase,'заглавной буквы'),
+                            (ascii_lowercase,'строчной буквы'),
+                            (digits,'цифры')))
+    
+    for key in error_dict:
+         if set(password).isdisjoint(key):
+              failure(login,f'в пароле нет ни одной {error_dict.get(key)}')
+              break
+    else:
+         success(login)         

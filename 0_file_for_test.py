@@ -176,15 +176,6 @@ x = 1#{'a': 1, 'b': 2}
 
 # print(**zrr) 
 # {'c': 4, 'a': 1, 'b': 3}
-
-#re-assigning the function print
-def f():
-   kek = 0
-   def g():
-     nonlocal kek
-     kek = 1
-     print(kek)
-   g()
-   
-f
-
+# print(dir() is vars())
+print(dir())
+print(globals())

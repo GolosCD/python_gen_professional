@@ -89,48 +89,102 @@
 
 # print(a)
 
-from string import ascii_letters, ascii_uppercase, ascii_lowercase, digits
+# from string import ascii_letters, ascii_uppercase, ascii_lowercase, digits
 
-error_dict:dict = dict(((ascii_letters,'буквы'),
-                            (ascii_uppercase,'заглавной буквы'),
-                            (ascii_lowercase,'строчной буквы'),
-                            (digits,'цифры')))
+# error_dict:dict = dict(((ascii_letters,'буквы'),
+#                             (ascii_uppercase,'заглавной буквы'),
+#                             (ascii_lowercase,'строчной буквы'),
+#                             (digits,'цифры')))
 
-password = 'stepikstepik2'
+# password = 'stepikstepik2'
 
-check_fun = lambda x,key: set(x).isdisjoint(key)
+# check_fun = lambda x,key: set(x).isdisjoint(key)
 
-#set(password).isdisjoint(set_latin_letters)
-
-
-
-for k in error_dict:
-    print(check_fun(password,k))
+# #set(password).isdisjoint(set_latin_letters)
 
 
 
-import string
+# for k in error_dict:
+#     print(check_fun(password,k))
 
-def verification(login   :str,
-                 password:str,
-                 success:callable,
-                 failure:callable
-                 )->list:
-    flag = False
 
-    if any(i.isalpha() for i in password if i.lower() in string.ascii_lowercase):
-        if any(i.isupper() for i in password if i in string.ascii_uppercase):
-                if any(i.lower() for i in password if i in string.ascii_lowercase):
-                        if any(i.isdigit() for i in password):
-                            flag = True
-                        else:
-                            failure(login,'в пароле нет ни одной цифры') 
-                else:
-                    failure(login,'в пароле нет ни одной строчной буквы')
-        else:
-            failure(login,'в пароле нет ни одной заглавной буквы')
-    else:
-        failure(login,'в пароле нет ни одной буквы')      
 
-    if flag:
-        success(login)    
+# import string
+
+# def verification(login   :str,
+#                  password:str,
+#                  success:callable,
+#                  failure:callable
+#                  )->list:
+#     flag = False
+
+#     if any(i.isalpha() for i in password if i.lower() in string.ascii_lowercase):
+#         if any(i.isupper() for i in password if i in string.ascii_uppercase):
+#                 if any(i.lower() for i in password if i in string.ascii_lowercase):
+#                         if any(i.isdigit() for i in password):
+#                             flag = True
+#                         else:
+#                             failure(login,'в пароле нет ни одной цифры') 
+#                 else:
+#                     failure(login,'в пароле нет ни одной строчной буквы')
+#         else:
+#             failure(login,'в пароле нет ни одной заглавной буквы')
+#     else:
+#         failure(login,'в пароле нет ни одной буквы')      
+
+#     if flag:
+#         success(login)    
+
+
+seq: list = ['a', 2, 'b', 3, ['1a', '2a', '3a', '4a'], '5A', True, 8.763, ('python', 'c++')]
+
+
+
+# def rec_seq(sequens:list, elem:str = None)->list:
+
+#     result_list = list()
+
+#     if elem is not None:
+#         result_list.append(elem)
+
+
+#     for sq in sequens:
+#         if len(sq)==1:
+#             rec_seq(sequens,sq)
+#         else:
+#             for sq2 in sq:
+#                 rec_seq(sq,sq2)
+#     return result_list
+
+# print(rec_seq(seq))                
+
+
+# a = {'sep' : ',f ', 'end' : ' Finish'}
+
+# print(**a)
+
+
+# How to merge two dictionaries
+# in Python 3.5+
+
+x = 1#{'a': 1, 'b': 2}
+# y = {'b': 3, 'c': 4}
+
+# c = {'f': 3, 'i': 4}
+
+# zrr = {**x, **y,**c}
+
+# print(**zrr) 
+# {'c': 4, 'a': 1, 'b': 3}
+
+#re-assigning the function print
+def f():
+   kek = 0
+   def g():
+     nonlocal kek
+     kek = 1
+     print(kek)
+   g()
+   
+f
+

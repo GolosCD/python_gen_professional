@@ -177,5 +177,71 @@ x = 1#{'a': 1, 'b': 2}
 # print(**zrr) 
 # {'c': 4, 'a': 1, 'b': 3}
 # print(dir() is vars())
-print(dir())
-print(globals())
+
+
+# myset=set([9,2,3])
+# myset.update([4,5,6])
+
+# print(sorted(myset)
+      
+# def sort_priority(first:list,second:list)->callable:
+#     '''Функция сортирует списки и объединяет их в один.'''
+
+#     if len(globals().keys()) >14:
+#         tmp_name:str = list(globals().keys())[-1]
+#     else:
+#         tmp_name:str = list(globals().keys())[-2]
+        
+#     exec(f'global {tmp_name}')
+
+#     tmp_second:list = [i for i in sorted(second) if i in first]
+
+#     for elem in sorted(first):
+
+#         if not elem in tmp_second:
+
+#             tmp_second.append(elem)
+
+#     globals()[f'{tmp_name}']=tmp_second      
+
+
+from typing import Union
+
+IntFloat = int|float
+
+def get_digits(number: IntFloat)->list[int]:
+    '''Функция принимает число и возвращает это числов виде списка элементов.'''
+    
+    return [int(i) for i in str(number) if i.isdigit()]
+
+
+# INPUT DATA:
+
+# TEST_1:
+print(get_digits(16733))
+
+# TEST_2:
+print(get_digits(13.909934))
+
+# TEST_3:
+annotations = get_digits.__annotations__
+
+print(annotations['return'])
+
+# TEST_4:
+annotations = get_digits.__annotations__
+
+print(annotations['number'])
+
+# TEST_5:
+print(get_digits(848234124.73275))
+
+# TEST_6:
+print(get_digits(2))
+
+# TEST_7:
+print(get_digits(1234567890987654321))
+
+# TEST_8:
+print(*get_digits.__annotations__.keys())
+print(*get_digits.__annotations__.values())

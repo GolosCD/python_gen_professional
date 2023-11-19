@@ -205,43 +205,11 @@ x = 1#{'a': 1, 'b': 2}
 #     globals()[f'{tmp_name}']=tmp_second      
 
 
-from typing import Union
+tmp_list: list = [0]*7
 
-IntFloat = int|float
+tmp_list[1]=5
 
-def get_digits(number: IntFloat)->list[int]:
-    '''Функция принимает число и возвращает это числов виде списка элементов.'''
-    
-    return [int(i) for i in str(number) if i.isdigit()]
+print(tmp_list)
 
-
-# INPUT DATA:
-
-# TEST_1:
-print(get_digits(16733))
-
-# TEST_2:
-print(get_digits(13.909934))
-
-# TEST_3:
-annotations = get_digits.__annotations__
-
-print(annotations['return'])
-
-# TEST_4:
-annotations = get_digits.__annotations__
-
-print(annotations['number'])
-
-# TEST_5:
-print(get_digits(848234124.73275))
-
-# TEST_6:
-print(get_digits(2))
-
-# TEST_7:
-print(get_digits(1234567890987654321))
-
-# TEST_8:
-print(*get_digits.__annotations__.keys())
-print(*get_digits.__annotations__.values())
+if 0:
+    print('a')

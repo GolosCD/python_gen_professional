@@ -205,11 +205,10 @@ x = 1#{'a': 1, 'b': 2}
 #     globals()[f'{tmp_name}']=tmp_second      
 
 
-tmp_list: list = [0]*7
+a = (1,2,3,)
 
-tmp_list[1]=5
+b = range(1,100)
+print(b)
 
-print(tmp_list)
-
-if 0:
-    print('a')
+if set(a).isdisjoint(b):
+    print('Yes')

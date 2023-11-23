@@ -16,6 +16,8 @@ def returns_string(func: callable) ->callable:
     
     @functools.wraps(func)
     def wrapper(*args: tuple[str],**kwargs: dict[str:str]) ->callable:
+        """ Декоратор проверять, что введеные значения это str"""
+        
         if isinstance(func(*args,**kwargs),str):
             return func(*args,**kwargs)
         else:

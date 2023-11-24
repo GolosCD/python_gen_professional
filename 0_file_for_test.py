@@ -1,15 +1,5 @@
-st = 3
-end = 5
+st = set((3,2,1))
+end = set((3,2))
 string = 'beegeek'
 
-otr = string[st:end]
-
-len_ont = len(otr)
-
-string1 = string[:st]+('.'*len_ont)+string[5:]
-
-
-
-print(string1,len(string1))
-print('')
-print(string,len(string))
+print(string.__class__)

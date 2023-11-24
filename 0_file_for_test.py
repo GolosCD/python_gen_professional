@@ -1,13 +1,15 @@
-def ppor(*args):
-    arg = args
-    return arg
-    
-    
-    
-a = ppor('a','r','w','q')
+st = 3
+end = 5
+string = 'beegeek'
+
+otr = string[st:end]
+
+len_ont = len(otr)
+
+string1 = string[:st]+('.'*len_ont)+string[5:]
 
 
-print(a.cell_contents)
 
-# for i in a.__closure__:
-    # print(i)
+print(string1,len(string1))
+print('')
+print(string,len(string))

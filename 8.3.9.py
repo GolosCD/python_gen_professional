@@ -31,8 +31,9 @@ Sample Output 3:
 
 3
 '''
+import time
 
-
+st = time.perf_counter()
 cache = dict(((1,1),(2,1),(3,1),(4,3)))                # ключ - номер числа, значение - число Фибоначчи
 
 def tribonacci(n):
@@ -40,6 +41,21 @@ def tribonacci(n):
     if result is None:
         result = tribonacci(n - 3) + tribonacci(n - 2)+ tribonacci(n - 1)
         cache[n] = result
-    return result
+    return result 
+end = time.perf_counter()
+print(end-st)
+
+
+from functools import lru_cache
+
+
+st = time.perf_counter()
+@lru_cache(maxsize=100)
+def tribonacci(n):
+    if n<=1:
+        return n
+    else:
+        return tribonacci(n - 3) + tribonacci(n - 2)+ tribonacci(n - 1)
     
-print(tribonacci(300))    
+end = time.perf_counter()
+print(end-st)

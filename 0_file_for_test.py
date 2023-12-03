@@ -1,5 +1,8 @@
-data = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
+suits = ['пик', 'треф', 'бубен', 'червей']
 
-a = next(iter(data))
+number_cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'валет', 'дама', 'король', 'туз']
 
-print(a)
+a =iter([f'{i} {j}' for j in suits for i in number_cards])
+b = iter(a)
+
+print(*(a))

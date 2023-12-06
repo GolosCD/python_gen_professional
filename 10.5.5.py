@@ -11,29 +11,16 @@ count — натуральное число, по умолчанию имеет 
 
 Примечание 1. В тестирующую систему сдайте программу, содержащую только необходимую генераторную функцию dates(), но не код, вызывающий ее.
 '''
-from datetime import date
+from datetime import date,timedelta
 
 def dates(start : date, count = None):
-    year,month,day = start.year,start.month,start.day
-    day-=1
-    counter = 0
-    
-    while counter!=count:
-        try:
-            day+=1
-            date(year,month,day)
-        except:
-            day=1
-            month+=1
-            if month>12:
-                year+=1
-                month=1
-                if year>9999:
-                    return StopIteration
-                
-
-        counter+=1
-        yield date(year,month,day)
+    counter_day = 0
+    try:
+        while counter_day!=count:
+            yield start+timedelta(days = counter_day)
+            counter_day += 1
+    except:
+        return StopIteration
             
 
 

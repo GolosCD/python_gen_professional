@@ -18,11 +18,11 @@ iterable — итерируемый объект
 
 def with_previous(iterable):
     iterable = list(iterable)
-    yield from ((val,None) if iterable.index(val) == 0 else (val,iterable[iterable.index(val)-1]) for val in iterable)
+    yield from ((v,None) if i == 0 else (v,iterable[i-1])for i,v in enumerate(iterable))
 
 
 
-'''
+
 # INPUT DATA:
 
 # TEST_1:
@@ -34,7 +34,7 @@ print(*with_previous(numbers))
 iterator = iter('stepik')
 
 print(*with_previous(iterator))
-'''
+
 # TEST_3:
 print(*with_previous(map(abs, range(-100, 100))))
 

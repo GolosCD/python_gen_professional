@@ -20,26 +20,16 @@ import itertools as it
 
 def roundrobin(*args):
 
-    iterators_list :list = list()
-    
-    empty_gen_list :list = list()
-    
-    for i in args:
-        iterators_list.append(iter(i))   
+    iterators_list :list = [iter(sequence) for sequence in args] 
         
     cycle_gen_list :list = it.cycle(iterators_list)
-
-    flag = True
     
-    while len(args)!=len(empty_gen_list):
+    while iterators_list:
         curent_sec = next(cycle_gen_list)
-        
-        if not curent_sec in empty_gen_list:
-            try:
-                item = next(curent_sec)
-                yield item
-            except:
-                empty_gen_list.append(curent_sec)
+        try:
+            yield next(curent_sec)
+        except:
+            iterators_list = [iter for iter in iterators_list if iter!=curent_sec]
 
     
     

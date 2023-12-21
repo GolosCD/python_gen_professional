@@ -47,12 +47,9 @@ from itertools import compress
 
 def first_true(iterable , predicate = None):
     if not predicate: predicate = bool;
-    iterable = list(iterable)
-    bool_list = list()    
+    iterable = list(iterable)    
     
-    [bool_list.append(predicate(i)) for i in iterable if not True in bool_list]
-    
-    return_val = compress(iter(iterable),iter(bool_list))
+    return_val = compress(iter(iterable),map(predicate, iterable))
 
     try: 
         a = list(return_val)[0] 

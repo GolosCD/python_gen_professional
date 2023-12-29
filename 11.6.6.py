@@ -18,9 +18,4 @@
 
 import re
 
-input_line = 'Добрый день, Тимур! Предлагаем обсудить ряд курсов в сотрудничестве с нашим фондом.'#input()
-
-mask = '^(здравствуйте)|(Добр(ый|ое))'
-
-
-print(bool(re.search(mask,input_line,re.IGNORECASE)))
+print(bool(re.search(r'^(здравствуйте|доброе утро|добрый день|добрый вечер)',input(),re.IGNORECASE)))
